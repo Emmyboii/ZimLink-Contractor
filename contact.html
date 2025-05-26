@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contact Us - Zimlink Contractors</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet" />
+        <link rel="icon" href="/Images/logo4.png" type="image/png" />
+        <style>
+      [data-animate] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-in-out;
+      }
+
+      [data-animate].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+        <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll("[data-animate]").forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+    </head>
+    <body class="bg-white text-gray-900 font-sans leading-relaxed">
+        <!-- Header -->
+        <header class="bg-blue-800 text-white shadow-md sticky top-0 z-50">
+            <div
+                class="container mx-auto flex items-center justify-between p-5 max-w-7xl">
+                <!-- Logo + Site Title -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="/Images/zimlink Logo2.png"
+                        alt="Zimlink Contractors Logo"
+                        class="w-40 rounded-3xl" />
+                </a>
+
+                <!-- Mobile menu button -->
+                <button id="nav-toggle"
+                    class="block md:hidden focus:outline-none"
+                    aria-label="Toggle navigation menu"
+                    title="Toggle navigation menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <nav id="nav-menu"
+                    class="hidden md:flex space-x-8 text-lg font-medium">
+                    <a href="index.html"
+                        class="hover:text-blue-300 transition">Home</a>
+                    <a href="about.html"
+                        class="hover:text-blue-300 transition">About</a>
+                    <a href="services.html"
+                        class="hover:text-blue-300 transition">Services</a>
+                    <a href="contact.html"
+                        class="hover:text-blue-300 font-bold underline transition">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Nav (shown when toggled) -->
+            <div id="nav-mobile"
+                class="md:hidden hidden absolute top-26 w-full z-50 bg-blue-700">
+                <nav class="flex flex-col space-y-2 p-4">
+                    <a href="index.html"
+                        class="block text-white hover:text-blue-200">Home</a>
+                    <a href="about.html"
+                        class="block text-white hover:text-blue-200">About</a>
+                    <a href="services.html"
+                        class="block text-white hover:text-blue-200">Services</a>
+                    <a href="contact.html"
+                        class="block text-white hover:text-blue-200">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Banner -->
+        <section
+            class="relative bg-blue-900 text-white py-20 px-6 text-center"
+            style="
+        background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80')
+          center/cover no-repeat;
+      ">
+            <div
+                class="bg-blue-900 bg-opacity-80 max-w-4xl mx-auto rounded-lg p-12"
+                data-animate>
+                <h2 class="text-5xl font-bold mb-4 drop-shadow-lg">
+                    Contact Zimlink Contractors
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto drop-shadow-md">
+                    Questions? Quotes? We're here to assist you with all your
+                    home repair
+                    and maintenance needs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Info & Form -->
+        <main class="py-16 px-6">
+            <div
+                class="container mx-auto max-w-6xl grid gap-20 md:grid-cols-3 items-start">
+                <!-- Contact Info -->
+                <aside class="space-y-8" data-animate>
+                    <h2 class="text-4xl font-bold mb-6 text-blue-800">Get in
+                        Touch</h2>
+                    <p class="text-gray-700 text-lg">
+                        Have questions or need a free quote? Reach out to
+                        Zimlink Contractors today.
+                    </p>
+                    <div class="text-gray-800 text-lg space-y-5">
+                        <!-- Phone -->
+                        <div>
+                            <h3
+                                class="font-semibold text-blue-700 mb-1 flex items-center space-x-2">
+                                <img
+                                    src="https://img.icons8.com/ios-filled/24/007acc/phone.png"
+                                    alt="Phone Icon"
+                                    class="w-6 h-6" />
+                                <span>Phone</span>
+                            </h3>
+                            <a
+                                href="tel:6518153444"
+                                class="underline hover:text-blue-600 text-lg font-medium">651-815-3444</a>
+                        </div>
+
+                        <!-- Address -->
+                        <div>
+                            <h3
+                                class="font-semibold text-blue-700 mb-1 flex items-center space-x-2">
+                                <img
+                                    src="https://img.icons8.com/ios-filled/24/007acc/marker.png"
+                                    alt="Address Icon"
+                                    class="w-6 h-6" />
+                                <span>Address</span>
+                            </h3>
+                            <address class="not-italic text-lg font-medium">
+                                827 Glen Terrace<br />Newport, MN 55055
+                            </address>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <h3
+                                class="font-semibold text-blue-700 mb-1 flex items-center space-x-2">
+                                <img
+                                    src="https://img.icons8.com/ios-filled/24/007acc/new-post.png"
+                                    alt="Email Icon"
+                                    class="w-6 h-6" />
+                                <span>Email</span>
+                            </h3>
+                            <a
+                                href="mailto:info@zimlinkcontractors.com"
+                                class="underline hover:text-blue-600 text-lg font-medium">info@zimlinkcontractors.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div
+                        class="hidden md:block mt-10 rounded-lg overflow-hidden shadow-lg">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.818098559875!2d-92.94817908454272!3d44.03216727910417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33b9f32a4fbe1%3A0x584d1e5b293179db!2s827%20Glen%20Terrace%2C%20Newport%2C%20MN%2055055!5e0!3m2!1sen!2sus!4v1695548973433!5m2!1sen!2sus"
+                            width="100%"
+                            height="300"
+                            style="border: 0"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </aside>
+
+                <!-- Form -->
+                <section
+                    aria-label="Contact form"
+                    class="bg-gray-50 rounded-lg shadow-lg p-8 md:col-span-2"
+                    data-animate>
+                    <h3 class="text-3xl font-bold mb-6 text-blue-700">Send Us a
+                        Message</h3>
+                    <form action="#" method="POST">
+                        <label for="name"
+                            class="block mb-2 font-semibold text-gray-800">Full
+                            Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            class="w-full mb-4 px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your full name" />
+
+                        <label for="email"
+                            class="block mb-2 font-semibold text-gray-800">Email
+                            Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full mb-4 px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="you@example.com" />
+
+                        <label for="phone"
+                            class="block mb-2 font-semibold text-gray-800">Phone
+                            Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            class="w-full mb-4 px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Optional" />
+
+                        <label for="message"
+                            class="block mb-2 font-semibold text-gray-800">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            required
+                            class="w-full mb-6 px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="How can we assist you?"></textarea>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-700 text-white font-semibold rounded-lg py-3 hover:bg-blue-800 transition">
+                            Submit
+                        </button>
+
+                        <p class="mt-6 text-sm text-gray-600">
+                            We respect your privacy and will never share your
+                            information.
+                        </p>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <!-- Testimonials -->
+        <section class="bg-blue-50 py-16 px-6">
+            <div class="container mx-auto max-w-4xl text-center" data-animate>
+                <h2 class="text-4xl font-bold mb-10 text-blue-800">What Our
+                    Clients Say</h2>
+                <div class="space-y-8">
+                    <blockquote
+                        class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
+                        <p class="italic text-lg">
+                            "Zimlink Contractors did an amazing job repairing
+                            our deck quickly and
+                            professionally. Highly recommend!"
+                        </p>
+                        <footer class="mt-4 font-semibold text-blue-700">&mdash;
+                            Jane M.</footer>
+                    </blockquote>
+                    <blockquote
+                        class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
+                        <p class="italic text-lg">
+                            "Reliable, friendly, and skilled. They made our home repairs hassle-free."
+                        </p>
+                        <footer class="mt-4 font-semibold text-blue-700">&mdash;
+                            Marcus L.</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-300 pt-12">
+            <div
+                class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Zimlink
+                        Contractors</h4>
+                    <p class="text-gray-400 mb-4">Reliable home repairs and
+                        maintenance services in Newport, MN. Handyman,
+                        electrical, and plumbing solutions you can trust.</p>
+                    <p class="text-gray-400">&copy; 2025 Zimlink Contractors</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Quick
+                        Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-white transition">About
+                                Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Contact
+                        Us</h4>
+                    <p class="text-gray-400 flex items-start">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"
+                            alt="Address Icon" class="w-5 h-5 mr-2 mt-1" />
+                        827 Glen Terrace, Newport, MN 55055
+                    </p>
+                    <p class="text-gray-400 flex items-center mt-4">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+                            alt="Phone Icon" class="w-5 h-5 mr-2" />
+                        <a href="tel:6518153444"
+                            class="hover:text-white transition">651-815-3444</a>
+                    </p>
+                    <p class="text-gray-400 flex items-center mt-4">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
+                            alt="Email Icon" class="w-5 h-5 mr-2" />
+                        <a href="mailto:info@zimlinkcontractors.com"
+                            class="hover:text-white transition">info@zimlinkcontractors.com</a>
+                    </p>
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Follow
+                        Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.5 9.8v-6.9H8v-2.9h2.5V9.5c0-2.5 1.5-3.8 3.7-3.8 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6v2h2.9l-.5 2.9h-2.4v6.9A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M8 19c7.7 0 11.9-6.3 11.9-11.7 0-.2 0-.4 0-.6A8.3 8.3 0 0022 5.5a8.2 8.2 0 01-2.3.7 4.1 4.1 0 001.8-2.3 8.3 8.3 0 01-2.6 1 4.1 4.1 0 00-7 3.7 11.6 11.6 0 01-8.5-4.3 4.1 4.1 0 001.3 5.4A4 4 0 012 9.7v.1a4.1 4.1 0 003.3 4 4.1 4.1 0 01-1.8.1 4.1 4.1 0 003.8 2.8 8.3 8.3 0 01-5.7 1.6 8.4 8.4 0 01-1-.1 11.7 11.7 0 007 2" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.6 0 3 1.4 3 3v10c0 1.6-1.4 3-3 3H7c-1.6 0-3-1.4-3-3V7c0-1.6 1.4-3 3-3zm5 2a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm4.5-.5a1 1 0 11-2 0 1 1 0 012 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional: Business Hours -->
+            <div class="container mx-auto px-6 text-center mt-8">
+                <p class="text-gray-500">Business Hours: Mon–Sat, 8:00 AM – 6:00
+                    PM</p>
+            </div>
+        </footer>
+
+    </body>
+    <script>
+    // Simple mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zimlink Contractors – Reliable Home Repairs & Services</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet" />
+        <link rel="icon" href="/Images/logo4.png" type="image/png" />
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="bg-white text-gray-900 font-sans leading-relaxed">
+
+        <!-- Header -->
+        <header class="bg-blue-800 text-white shadow-md sticky top-0 z-50">
+            <div
+                class="container mx-auto flex items-center justify-between p-5 max-w-7xl">
+                <!-- Logo + Site Title -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="/Images/zimlink Logo2.png"
+                        alt="Zimlink Contractors Logo"
+                        class="w-40 rounded-3xl" />
+                </a>
+
+                <!-- Mobile menu button -->
+                <button id="nav-toggle"
+                    class="block md:hidden focus:outline-none"
+                    aria-label="Toggle navigation menu"
+                    title="Toggle navigation menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                </button>
+
+                <!-- Navigation Links -->
+                <nav id="nav-menu"
+                    class="hidden md:flex space-x-8 text-lg font-medium">
+                    <a href="index.html"
+                        class="hover:text-blue-300 font-bold underline transition">Home</a>
+                    <a href="about.html"
+                        class="hover:text-blue-300 transition">About</a>
+                    <a href="services.html"
+                        class="hover:text-blue-300 transition">Services</a>
+                    <a href="contact.html"
+                        class="hover:text-blue-300 transition">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Nav (shown when toggled) -->
+            <div id="nav-mobile"
+                class="md:hidden hidden absolute top-26 w-full z-50 bg-blue-700">
+                <nav class="flex flex-col space-y-2 p-4">
+                    <a href="index.html"
+                        class="block text-white hover:text-blue-200">Home</a>
+                    <a href="about.html"
+                        class="block text-white hover:text-blue-200">About</a>
+                    <a href="services.html"
+                        class="block text-white hover:text-blue-200">Services</a>
+                    <a href="contact.html"
+                        class="block text-white hover:text-blue-200">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative bg-blue-900 text-white py-32 px-6 text-center">
+            <img
+                src="/Images/construction2.jpg"
+                alt="Handyman working on home repairs"
+                class="absolute inset-0 w-full h-full object-cover opacity-30" />
+            <div class="container mx-auto max-w-4xl relative z-10">
+                <h2 class="text-5xl font-bold mb-4 drop-shadow-lg">Trusted
+                    Handyman, Electrical & Plumbing Services in Newport, MN</h2>
+                <p
+                    class="text-lg md:text-xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+                    Whether you need minor repairs or expert advice, Zimlink
+                    Contractors delivers dependable solutions with unmatched
+                    quality and care.
+                </p>
+                <a href="contact.html"
+                    class="inline-block bg-white text-blue-700 font-semibold rounded-full px-8 py-3 shadow-lg hover:bg-gray-100 transition">Request
+                    a Free Quote</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="py-16 px-6">
+            <div
+                class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+                <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
+                    alt="About Us"
+                    class="rounded-lg shadow-lg object-cover w-full h-80 md:h-96"
+                    loading="lazy" />
+                <div>
+                    <h3 class="text-3xl font-bold mb-4 text-blue-800">About
+                        Zimlink Contractors</h3>
+                    <p class="mb-4 text-gray-700 leading-relaxed">
+                        At Zimlink Contractors, we believe your home deserves
+                        the highest standard of care. With years of hands-on
+                        experience in handyman services, electrical repairs, and
+                        plumbing solutions, we proudly serve the Newport, MN
+                        community with integrity and professionalism. Our
+                        mission is simple: to make home maintenance hassle-free
+                        and dependable for every homeowner.
+
+                        We understand that every home is unique—and so are your
+                        needs. That’s why our dedicated team takes the time to
+                        listen, assess, and tailor every solution with precision
+                        and care. Whether it’s fixing a leaky faucet, upgrading
+                        your electrical panel, or remodeling a room, we bring
+                        expert craftsmanship and attention to detail to every
+                        job.
+
+                        From urgent repairs to planned improvements, we’re here
+                        to ensure your home remains safe, functional, and
+                        comfortable all year round. We stand behind our work,
+                        communicate transparently, and never cut corners—because
+                        your satisfaction isn’t just a goal, it’s our guarantee.
+
+                        Trust Zimlink Contractors to treat your home like our
+                        own.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        From simple repairs to complex installations, we ensure
+                        your home stays safe, functional, and comfortable. Your
+                        satisfaction is our top priority.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section with Image -->
+        <section class="py-20 px-6 bg-gray-50">
+            <div
+                class="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+
+                <!-- Content Column -->
+                <div>
+                    <h3
+                        class="text-4xl font-bold mb-4 text-gray-800 text-center lg:text-left">Why
+                        Choose Zimlink Contractors?</h3>
+                    <p
+                        class="text-lg text-gray-600 mb-8 text-center lg:text-left">
+                        When it comes to your home, you deserve more than just a
+                        quick fix — you deserve a team that cares, communicates,
+                        and delivers with excellence. Here's why homeowners in
+                        Newport, MN trust Zimlink Contractors.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                            <h4
+                                class="text-lg font-semibold mb-2 text-blue-700">Experienced
+                                Professionals</h4>
+                            <p class="text-gray-700 text-sm">With decades of
+                                hands-on expertise, we bring confidence and
+                                precision to every job.</p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                            <h4
+                                class="text-lg font-semibold mb-2 text-blue-700">Reliable
+                                & On-Time</h4>
+                            <p class="text-gray-700 text-sm">We arrive on
+                                schedule and finish the job efficiently — no
+                                delays or excuses.</p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                            <h4
+                                class="text-lg font-semibold mb-2 text-blue-700">Upfront
+                                Pricing</h4>
+                            <p class="text-gray-700 text-sm">Fair, honest
+                                pricing with no hidden surprises. You know
+                                exactly what you’re paying for.</p>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+                            <h4
+                                class="text-lg font-semibold mb-2 text-blue-700">Trusted
+                                Locally</h4>
+                            <p class="text-gray-700 text-sm">We’re a part of the
+                                Newport community and we take care of our
+                                neighbors like family.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 text-center lg:text-left">
+                        <a href="/contact.html"
+                            class="inline-block bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-md hover:bg-blue-800 transition">
+                            Get Your Free Estimate Today
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="/Images/Construction1.jpg" alt="Handyman at work"
+                        class="rounded-2xl shadow-lg w-full h-auto object-cover mb-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services -->
+        <section class="py-16 px-6 bg-blue-50">
+            <div class="container mx-auto max-w-6xl">
+                <h3
+                    class="text-4xl font-bold text-center mb-6 text-blue-800">Our
+                    Core Services</h3>
+                <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+                    At Zimlink Contractors, we offer a full range of home repair
+                    and maintenance solutions to keep your property safe,
+                    functional, and beautiful. Explore our expertise below.
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                    <!-- Handyman -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition duration-300">
+                        <img src="/Images/handyMan.jpg"
+                            alt="Handyman assembling furniture"
+                            class="h-48 w-full object-cover rounded mb-6"
+                            loading="lazy" />
+                        <h4
+                            class="text-2xl font-semibold mb-3 text-blue-700">Handyman
+                            Services</h4>
+                        <p class="text-gray-700 mb-4">
+                            From furniture assembly and door repairs to picture
+                            hanging and minor home improvements — we handle it
+                            all with care and precision.
+                        </p>
+                        <a href="services.html#handyman"
+                            class="text-blue-600 hover:underline">Learn more
+                            →</a>
+                    </div>
+
+                    <!-- Electrical -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition duration-300">
+                        <img src="/Images/electrical.jpg"
+                            alt="Electrician installing light fixture"
+                            class="h-48 w-full object-cover rounded mb-6"
+                            loading="lazy" />
+                        <h4
+                            class="text-2xl font-semibold mb-3 text-blue-700">Minor
+                            Electrical Work</h4>
+                        <p class="text-gray-700 mb-4">
+                            Safe and efficient installations, from light
+                            fixtures and ceiling fans to outlet and switch
+                            replacements, ensuring your home is both bright and
+                            secure.
+                        </p>
+                        <a href="services.html#electrical"
+                            class="text-blue-600 hover:underline">Learn more
+                            →</a>
+                    </div>
+
+                    <!-- Plumbing -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition duration-300">
+                        <img src="/Images/plumbing.jpg"
+                            alt="Plumber fixing a pipe"
+                            class="h-48 w-full object-cover rounded mb-6"
+                            loading="lazy" />
+                        <h4
+                            class="text-2xl font-semibold mb-3 text-blue-700">Minor
+                            Plumbing Repairs</h4>
+                        <p class="text-gray-700 mb-4">
+                            Quick solutions for dripping faucets, clogged
+                            drains, toilet repairs, and minor pipe fixes to keep
+                            your plumbing running smoothly.
+                        </p>
+                        <a href="services.html#plumbing"
+                            class="text-blue-600 hover:underline">Learn more
+                            →</a>
+                    </div>
+
+                    <!-- Carpentry & Woodwork -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition duration-300">
+                        <img src="/Images/carpentry.jpg"
+                            alt="Carpenter working on shelving"
+                            class="h-48 w-full object-cover rounded mb-6"
+                            loading="lazy" />
+                        <h4
+                            class="text-2xl font-semibold mb-3 text-blue-700">Carpentry
+                            & Woodwork</h4>
+                        <p class="text-gray-700 mb-4">
+                            Custom shelving, cabinetry, trim installation,
+                            furniture repairs, and deck or fence maintenance —
+                            crafted to enhance your home’s functionality and
+                            style.
+                        </p>
+                        <a href="services.html#carpentry"
+                            class="text-blue-600 hover:underline">Learn more
+                            →</a>
+                    </div>
+
+                    <!-- Painting & Touch-Ups -->
+                    <div
+                        class="bg-white rounded-lg shadow-lg p-8 hover:shadow-2xl transition duration-300">
+                        <img src="/Images/painting.jpg"
+                            alt="Painter touching up a wall"
+                            class="h-48 w-full object-cover rounded mb-6"
+                            loading="lazy" />
+                        <h4
+                            class="text-2xl font-semibold mb-3 text-blue-700">Painting
+                            & Touch-Ups</h4>
+                        <p class="text-gray-700 mb-4">
+                            Professional interior and exterior painting, wall
+                            prep and patching, trim and door painting, plus
+                            color consultations to refresh your space.
+                        </p>
+                        <a href="services.html#painting"
+                            class="text-blue-600 hover:underline">Learn more
+                            →</a>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-12 text-center">
+                    <a href="services.html"
+                        class="inline-block bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-blue-800 transition">
+                        View All Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Gallery -->
+        <section class="py-16 px-6 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h3
+                    class="text-3xl font-bold text-center mb-12 text-blue-800">Recent
+                    Projects</h3>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <img
+                        src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80"
+                        alt="Kitchen renovation project"
+                        class="rounded-lg shadow-md object-cover w-full h-48"
+                        loading="lazy" />
+                    <img
+                        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80"
+                        alt="Bathroom plumbing repair"
+                        class="rounded-lg shadow-md object-cover w-full h-48"
+                        loading="lazy" />
+                    <img
+                        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80"
+                        alt="Living room handyman work"
+                        class="rounded-lg shadow-md object-cover w-full h-48"
+                        loading="lazy" />
+                    <img
+                        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80"
+                        alt="Electrical fixture installation"
+                        class="rounded-lg shadow-md object-cover w-full h-48"
+                        loading="lazy" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto max-w-6xl text-center">
+                <h3 class="text-3xl font-bold mb-12 text-blue-800">Meet Our
+                    Team</h3>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <img
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="John Doe"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-semibold text-blue-700">John
+                            Doe</h4>
+                        <p class="text-gray-700">Lead Handyman</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/65.jpg"
+                            alt="Jane Smith"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-semibold text-blue-700">Jane
+                            Smith</h4>
+                        <p class="text-gray-700">Senior Electrician</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <img
+                            src="https://randomuser.me/api/portraits/men/74.jpg"
+                            alt="Robert Brown"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-semibold text-blue-700">Robert
+                            Brown</h4>
+                        <p class="text-gray-700">Plumbing Specialist</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/48.jpg"
+                            alt="Emily White"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                        <h4 class="text-xl font-semibold text-blue-700">Emily
+                            White</h4>
+                        <p class="text-gray-700">Customer Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section
+            class="relative py-20 px-6 bg-gradient-to-r from-blue-100 to-blue-200">
+            <div class="container mx-auto max-w-5xl text-center">
+                <!-- Decorative Quote SVG -->
+                <svg
+                    class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-blue-300 opacity-20"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M7.17 6A5.002 5.002 0 007 16h2a3 3 0 003-3v-1.17A3.001 3.001 0 0012 7H7.17zm10 0A5.002 5.002 0 0017 16h2a3 3 0 003-3v-1.17A3.001 3.001 0 0022 7h-4.83z" />
+                </svg>
+
+                <h3 class="text-4xl font-bold mb-12 text-blue-900">What Our
+                    Clients Are Saying</h3>
+
+                <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/68.jpg"
+                            alt="Sarah M."
+                            class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md">
+                        <p class="italic text-gray-700 mb-4">
+                            “Zimlink Contractors fixed my kitchen sink leak in
+                            under an hour. The team was friendly, courteous, and
+                            incredibly professional. I couldn’t be happier!”
+                        </p>
+                        <!-- Star Rating -->
+                        <div class="flex justify-center mb-4 text-yellow-400">
+                            ★★★★☆
+                        </div>
+                        <footer class="font-semibold text-blue-700">— Sarah M.,
+                            Newport, MN</footer>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <img
+                            src="https://randomuser.me/api/portraits/men/45.jpg"
+                            alt="Michael T."
+                            class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md">
+                        <p class="italic text-gray-700 mb-4">
+                            “Professional, punctual, and thorough — Zimlink
+                            Contractors handled my deck repair with expert
+                            precision. I highly recommend their services!”
+                        </p>
+                        <div class="flex justify-center mb-4 text-yellow-400">
+                            ★★★★★
+                        </div>
+                        <footer class="font-semibold text-blue-700">— Michael
+                            T., Cottage Grove, MN</footer>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/12.jpg"
+                            alt="Jennifer L."
+                            class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md">
+                        <p class="italic text-gray-700 mb-4">
+                            “I called them for an emergency electrical issue
+                            late at night. They responded quickly and solved the
+                            problem safely. Exceptional service!”
+                        </p>
+                        <div class="flex justify-center mb-4 text-yellow-400">
+                            ★★★★☆
+                        </div>
+                        <footer class="font-semibold text-blue-700">— Jennifer
+                            L., South St. Paul, MN</footer>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg relative">
+                        <img
+                            src="https://randomuser.me/api/portraits/men/84.jpg"
+                            alt="Carlos G."
+                            class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md">
+                        <p class="italic text-gray-700 mb-4">
+                            “Affordable pricing and top-quality workmanship.
+                            They refurbished my bathroom plumbing and did a
+                            flawless job. Will use again!”
+                        </p>
+                        <div class="flex justify-center mb-4 text-yellow-400">
+                            ★★★★★
+                        </div>
+                        <footer class="font-semibold text-blue-700">— Carlos G.,
+                            Woodbury, MN</footer>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-12">
+                    <a href="contact.html"
+                        class="inline-block bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-blue-800 transition">
+                        Join Our Happy Customers
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-white py-16 px-6">
+            <div class="container mx-auto max-w-5xl">
+                <h3
+                    class="text-3xl font-bold text-center text-blue-800 mb-10">Frequently
+                    Asked Questions</h3>
+
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <details
+                        class="group bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                            What areas do you serve?
+                            <span
+                                class="ml-2 transition-transform group-open:rotate-180">&#9660;</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">We proudly serve Newport,
+                            MN, and surrounding communities including Woodbury,
+                            Cottage Grove, and St. Paul. Not sure if we cover
+                            your area? Contact us!</p>
+                    </details>
+
+                    <!-- FAQ Item 2 -->
+                    <details
+                        class="group bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                            What services do you offer?
+                            <span
+                                class="ml-2 transition-transform group-open:rotate-180">&#9660;</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">We provide a wide range of
+                            home repair services including electrical work,
+                            plumbing, drywall repair, light fixture
+                            installation, and general handyman services.</p>
+                    </details>
+
+                    <!-- FAQ Item 3 -->
+                    <details
+                        class="group bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                            Are your services insured and guaranteed?
+                            <span
+                                class="ml-2 transition-transform group-open:rotate-180">&#9660;</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">Yes! All of our services
+                            are fully insured, and we stand behind our
+                            workmanship with a satisfaction guarantee.</p>
+                    </details>
+
+                    <!-- FAQ Item 4 -->
+                    <details
+                        class="group bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                            How do I request a quote or schedule a service?
+                            <span
+                                class="ml-2 transition-transform group-open:rotate-180">&#9660;</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">You can call us, fill out
+                            the contact form on our website, or email us
+                            directly. We’ll get back to you quickly to discuss
+                            your needs and provide a free estimate.</p>
+                    </details>
+
+                    <!-- FAQ Item 5 -->
+                    <details
+                        class="group bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer text-lg font-medium text-gray-800">
+                            Do you offer emergency repairs?
+                            <span
+                                class="ml-2 transition-transform group-open:rotate-180">&#9660;</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600">Yes, we understand that
+                            some repairs can’t wait. Contact us for urgent
+                            service and we’ll do our best to respond
+                            promptly.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section
+            class="py-16 px-6 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+            <div class="container mx-auto max-w-4xl">
+                <h3 class="text-3xl font-bold mb-6 drop-shadow-lg">Ready to get
+                    your home repairs done right?</h3>
+                <p class="mb-8 drop-shadow-md">Contact Zimlink Contractors today
+                    for a free estimate and fast scheduling.</p>
+                <a href="contact.html"
+                    class="inline-block bg-white text-blue-700 font-bold rounded-full px-10 py-4 shadow-lg hover:bg-gray-100 transition">Contact
+                    Us</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-300 pt-12">
+            <div
+                class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Zimlink
+                        Contractors</h4>
+                    <p class="text-gray-400 mb-4">Reliable home repairs and
+                        maintenance services in Newport, MN. Handyman,
+                        electrical, and plumbing solutions you can trust.</p>
+                    <p class="text-gray-400">&copy; 2025 Zimlink Contractors</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Quick
+                        Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-white transition">About
+                                Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-white transition">Services</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Contact
+                        Us</h4>
+                    <p class="text-gray-400 flex items-start">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"
+                            alt="Address Icon" class="w-5 h-5 mr-2 mt-1" />
+                        827 Glen Terrace, Newport, MN 55055
+                    </p>
+                    <p class="text-gray-400 flex items-center mt-4">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+                            alt="Phone Icon" class="w-5 h-5 mr-2" />
+                        <a href="tel:6518153444"
+                            class="hover:text-white transition">651-815-3444</a>
+                    </p>
+                    <p class="text-gray-400 flex items-center mt-4">
+                        <img
+                            src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
+                            alt="Email Icon" class="w-5 h-5 mr-2" />
+                        <a href="mailto:info@zimlinkcontractors.com"
+                            class="hover:text-white transition">info@zimlinkcontractors.com</a>
+                    </p>
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Follow
+                        Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12a10 10 0 10-11.5 9.8v-6.9H8v-2.9h2.5V9.5c0-2.5 1.5-3.8 3.7-3.8 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6v2h2.9l-.5 2.9h-2.4v6.9A10 10 0 0022 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M8 19c7.7 0 11.9-6.3 11.9-11.7 0-.2 0-.4 0-.6A8.3 8.3 0 0022 5.5a8.2 8.2 0 01-2.3.7 4.1 4.1 0 001.8-2.3 8.3 8.3 0 01-2.6 1 4.1 4.1 0 00-7 3.7 11.6 11.6 0 01-8.5-4.3 4.1 4.1 0 001.3 5.4A4 4 0 012 9.7v.1a4.1 4.1 0 003.3 4 4.1 4.1 0 01-1.8.1 4.1 4.1 0 003.8 2.8 8.3 8.3 0 01-5.7 1.6 8.4 8.4 0 01-1-.1 11.7 11.7 0 007 2" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram"
+                            class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.6 0 3 1.4 3 3v10c0 1.6-1.4 3-3 3H7c-1.6 0-3-1.4-3-3V7c0-1.6 1.4-3 3-3zm5 2a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm4.5-.5a1 1 0 11-2 0 1 1 0 012 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional: Business Hours -->
+            <div class="container mx-auto px-6 text-center mt-8">
+                <p class="text-gray-500">Business Hours: Mon–Sat, 8:00 AM – 6:00
+                    PM</p>
+            </div>
+        </footer>
+
+    </body>
+    <script>
+    // Simple mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</html>
