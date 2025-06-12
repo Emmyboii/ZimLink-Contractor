@@ -13,14 +13,6 @@
     body {
       font-family: Arial, sans-serif; 
     }
-    .first{
-      line-height: 1.6;
-      margin: 2rem;
-      color: #000000;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
     h1, h2, h3 {
       color: #004080;
     }
@@ -103,7 +95,7 @@
             </div>
         </header>
 
-        <div class="first">
+        <div class="max-w-4xl mx-auto px-6 py-10 text-black">
             <h1>Terms of Service</h1>
             <p><strong>Effective Date:</strong> 12 June, 2025<br>
                 <strong>Last Updated:</strong> 12 June, 2025</p>
@@ -365,4 +357,12 @@
             </div>
         </div>
     </body>
+    <script>
+    // Simple mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </html>

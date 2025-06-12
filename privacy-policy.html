@@ -79,7 +79,7 @@
             </div>
         </header>
 
-        <section class="max-w-4xl mx-auto px-6 py-10 text-gray-800">
+        <section class="max-w-4xl mx-auto px-6 py-10 text-black">
             <h1 class="text-4xl font-bold mb-2 text-center">Privacy Policy</h1>
             <p><strong>Effective Date:</strong> 12 June, 2025<br>
                 <strong>Last Updated:</strong> 12 June, 2025</p>
@@ -279,7 +279,7 @@
                 <div>
                     <h2 class="font-semibold mb-2">Contact Us</h2>
                     <div>
-                    <p class="font-semibold">Zinklink Contractors</p>
+                        <p class="font-semibold">Zinklink Contractors</p>
                         Email: <a href="mailto:admin@zimlinkcontractors.com"
                             class="text-blue-600 underline">admin@zimlinkcontractors.com</a><br>
                         Phone: +1 651-815-3444<br>
@@ -297,6 +297,13 @@
                 </div>
             </div>
         </section>
-
     </body>
+    <script>
+    // Simple mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </html>
