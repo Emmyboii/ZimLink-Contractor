@@ -4,10 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Contact Us - Zimlink Contractors</title>
+        <!-- Tailwind CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
             rel="stylesheet" />
+
+        <!-- Toastr CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+        <!-- Toastr JS -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+        <!-- Favicon -->
         <link rel="icon" href="/Images/logo4.png" type="image/png" />
+
         <style>
       [data-animate] {
         opacity: 0;
@@ -45,7 +58,7 @@
             <div
                 class="container mx-auto flex items-center justify-between p-5 max-w-7xl">
                 <!-- Logo + Site Title -->
-                <a href="index.html" class="flex items-center space-x-3">
+                <a href="/" class="flex items-center space-x-3">
                     <img src="/Images/zimlink Logo2.png"
                         alt="Zimlink Contractors Logo"
                         class="w-40 rounded-3xl" />
@@ -174,7 +187,7 @@
                     </div>
 
                     <!-- Map -->
-                    <div
+                    <!-- <div
                         class="hidden md:block mt-10 rounded-lg overflow-hidden shadow-lg">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.818098559875!2d-92.94817908454272!3d44.03216727910417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33b9f32a4fbe1%3A0x584d1e5b293179db!2s827%20Glen%20Terrace%2C%20Newport%2C%20MN%2055055!5e0!3m2!1sen!2sus!4v1695548973433!5m2!1sen!2sus"
@@ -184,7 +197,7 @@
                             allowfullscreen
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    </div> -->
                 </aside>
 
                 <!-- Form -->
@@ -194,7 +207,7 @@
                     data-animate>
                     <h3 class="text-3xl font-bold mb-6 text-blue-700">Send Us a
                         Message</h3>
-                    <form action="#" method="POST">
+                    <form id="jotform" method="POST">
                         <label for="name"
                             class="block mb-2 font-semibold text-gray-800">Full
                             Name</label>
@@ -221,11 +234,13 @@
                             class="block mb-2 font-semibold text-gray-800">Phone
                             Number</label>
                         <input
-                            type="tel"
                             id="phone"
                             name="phone"
+                            type="tel"
+                            maxlength="11"
+                            required
                             class="w-full mb-4 px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Optional" />
+                            placeholder="Your phone number" />
 
                         <label for="message"
                             class="block mb-2 font-semibold text-gray-800">Message</label>
@@ -238,18 +253,32 @@
                             placeholder="How can we assist you?"></textarea>
 
                         <button
+                            id="submitBtn"
                             type="submit"
                             class="w-full bg-blue-700 text-white font-semibold rounded-lg py-3 hover:bg-blue-800 transition">
                             Submit
                         </button>
-
-                        <p class="mt-6 text-sm text-gray-600">
-                            We respect your privacy and will never share your
-                            information.
-                        </p>
                     </form>
+                    <p class="mt-6 text-sm text-gray-600">
+                        We respect your privacy and will never share your
+                        information.
+                    </p>
                 </section>
             </div>
+            <div id="custom-toast" style="
+  display: none;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 9999;
+"></div>
         </main>
 
         <!-- Testimonials -->
@@ -328,7 +357,7 @@
                         <a href="tel:+16518153444"
                             class="hover:text-white transition">651-815-3444</a>
                     </p>
-                   <p class="text-gray-400 flex items-center mt-4">
+                    <p class="text-gray-400 flex items-center mt-4">
                         <img
                             src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
                             alt="Email Icon" class="w-5 h-5 mr-2" />
@@ -338,12 +367,15 @@
                 </div>
 
                 <div>
-                    <h4 class="text-xl font-semibold text-white mb-4">Others</h4>
+                    <h4
+                        class="text-xl font-semibold text-white mb-4">Others</h4>
                     <ul class="space-y-2">
                         <li><a href="/terms-and-conditions" target="_blank"
-                                class="hover:text-white transition">Terms & Conditions</a></li>
+                                class="hover:text-white transition">Terms &
+                                Conditions</a></li>
                         <li><a href="/privacy-policy" target="_blank"
-                                class="hover:text-white transition">Privacy Policy</a></li>
+                                class="hover:text-white transition">Privacy
+                                Policy</a></li>
                     </ul>
                 </div>
 
@@ -380,17 +412,77 @@
                 </div>
             </div>
 
-            <!-- Optional: Business Hours -->
-            
         </footer>
 
-    </body>
-    <script>
-    // Simple mobile nav toggle
-    const btn = document.getElementById('nav-toggle');
-    const menu = document.getElementById('nav-mobile');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+        <!-- Contact Form Submission Script + Toastr Notifications -->
+        <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("jotform");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function showToast(message, isError = false) {
+      const toast = document.getElementById("custom-toast");
+      toast.textContent = message;
+      toast.style.backgroundColor = isError ? "#dc3545" : "#28a745"; // red for error, green for success
+      toast.style.display = "block";
+
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 3000); // Toast disappears after 3 seconds
+    }
+
+    const phoneInput = document.getElementById('phone');
+
+    phoneInput.addEventListener('input', function (e) {
+      const cleaned = e.target.value.replace(/\D/g, '').slice(0, 11);
+      e.target.value = cleaned;
     });
-  </script>
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+
+      const jotformURL = 'https://submit.jotform.com/submit/251641080240545/';
+      const formData = new FormData();
+
+      formData.append('q3_fullName3[first]', name);
+      formData.append('q6_email6', email);
+      formData.append('q5_phoneNumber5[full]', phone);
+      formData.append('q31_message', message);
+
+      try {
+        await fetch(jotformURL, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+        });
+
+        showToast("Your message has been sent successfully!");
+        form.reset();
+      } catch (error) {
+        showToast("Failed to submit. Please check your connection.", true);
+        console.error("Submit error:", error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
+    });
+  });
+</script>
+
+        <!-- Mobile nav toggle script -->
+        <script>
+      const btn = document.getElementById("nav-toggle");
+      const menu = document.getElementById("nav-mobile");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    </body>
 </html>
